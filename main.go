@@ -24,7 +24,7 @@ func init() {
 }
 func main() {
 	r := mux.NewRouter()
-	r.HandleFunc("/itempost", controllers.PostItems).Methods("POST")
+	r.HandleFunc("/itempost", controllers.PostItems)
 	r.HandleFunc("/item", controllers.GetItems).Methods("GET")
 	r.HandleFunc("/item", controllers.UpdateItem).Methods("PUT")
 	r.HandleFunc("/item", controllers.DeleteItem).Methods("DELETE")
